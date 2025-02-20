@@ -1,0 +1,19 @@
+{
+    "name": "@repo/db",
+    "version": "0.0.0",
+    "dependencies": {
+        "@prisma/client": "^5.11.0"
+    },
+    "devDependencies": {
+        "prisma": "5.11.0"
+    },
+    "exports": {
+        "./client": "./index.ts"
+    },
+    "prisma": {
+        "seed": "ts-node prisma/seed.ts"
+    },
+    "scripts": {
+        "dev": "npx prisma migrate dev && npx prisma db seed"
+    }
+}
